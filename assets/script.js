@@ -17,24 +17,45 @@ const slides = [
 	 },
 ];
 
-let nbr_de_slides = slides.length;
-let newDiv = document.createElement('div');
+let nbr_de_slides = 4;
 
-function afficherDots () {
-	for(let i = 0; i < nbr_de_slides; i++)
-		document.querySelector('.dots').append(newDiv);
-		newDiv.classList.add('dot');
+dots = document.querySelector('.dots')
 
+
+firstDot = document.createElement('div');
+firstDot.classList.add('dot')
+firstDot.classList.add('dot_selected')
+dots.appendChild(firstDot)
+
+for(let i = 0; i < nbr_de_slides - 1; i++) {
+	let tab = [];
+	tab[i] = document.createElement('div');
+	tab[i].classList.add('dot');
+	document.querySelector('.dots').append(tab[i]);
 }
+tabDots = Array.from(dots.children);
+console.log(tabDots);
 
-
-
+function removeactive () {
+	for (let i = 0; i < nbr_de_slides; i++) {
+		tabDots[i].classList.remove('dot_selected');
+	}
+}
 arrowLeft = document.querySelector('.arrow_left');
 arrowRight = document.querySelector('.arrow_right');
 
+slide_active = 0;
+
 arrowLeft.addEventListener('click', function () {
 	console.log('left');
+	
+	
 })
+
+
 arrowRight.addEventListener('click', function () {
 	console.log('right');
+	slide_active++;
+	removeactive();
+	tabDots[slide_active].classList('dot_selected');
 })
