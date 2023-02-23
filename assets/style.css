@@ -120,7 +120,9 @@ header {
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
+	transition: opacity 0,5s;
 }
+
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
