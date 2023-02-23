@@ -12,12 +12,12 @@ const slides = [
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	 },
 	 {
-		"image":"./assets/images/slideshow/slide4.jpg",
+		"image":"./assets/images/slideshow/slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	 },
 ];
 
-//INITIALISATION DES SLIDES
+//INITIALISATION DU CARROUSSEL
 img = document.querySelector('.banner-img');
 img.src = slides[0].image;
 
